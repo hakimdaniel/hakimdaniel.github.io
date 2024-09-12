@@ -83,4 +83,14 @@ body {
            padding: 7px;
            
        }
-       
+              
+       .content{
+           padding:120px 60px;
+           padding-bottom: 400px;
+           background-color: lightblue;
+       }
+       .content button{
+           padding: 14px 24px;
+           border: none;
+           border-radius:45px;
+       }
