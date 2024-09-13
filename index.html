@@ -17,11 +17,22 @@
         <h1>Belajar Python</h1>
         <div class="content">
             <button onclick="window.location.href='/page01.html'">Mula Belajar</button>
+            <p id="msg"></p>
         </div>
         <hr>
 <footer>
     <span>Hak cipta terpelihara &copy; 2024<br>Powered by Daniel Hakim</span>
 </footer>
+        <script>
+    function start(){
+        document.getElementById('msg').innerText="loading..."
+        setTimeout(()=>{
+            alert('Happy Coding!')
+            document.getElementById('msg').innerText=""
+            window.location.href = "/page01.html"
+        },1000)
+    }
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
     <!-- and it's easy to individually load additional languages -->
