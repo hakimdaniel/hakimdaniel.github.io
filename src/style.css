@@ -87,10 +87,14 @@ body {
        .content{
            padding:120px 60px;
            padding-bottom: 400px;
-           background-color: lightblue;
+           background-color: #FFF900;
        }
        .content button{
            padding: 14px 24px;
            border: none;
            border-radius:45px;
+           cursor: pointer;
+       }
+       .content button:hover{
+           outline:solid 2px #23CD00;
        }
