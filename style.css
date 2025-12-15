@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+
+* {
+  font-family: "Jersey 10", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(198, 253, 235);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(8, 38, 235);
+  transition: color 0.2s linear, transform 0.2s linear;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+nav {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    25deg,
+    rgb(234, 70, 41) 30%,
+    rgb(0, 255, 238) 60%
+  );
+}
+
+nav h1 {
+  user-select: none;
+  color: aliceblue;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 20px;
+}
+
+.root,
+.root2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(115, 187, 255);
+  height: 100vh;
+}
+.hero {
+  padding: 20px 30px;
+  background-color: aliceblue;
+  width: 200px;
+  height: 200px;
+  filter: blur(10px);
+  border: 2px solid black;
+  box-shadow: -10px 10px 12px rgba(0, 0, 0, 0.6),
+    inset 0 0 12px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+}
+
+.hero_open {
+  filter: blur(0);
+  height: 70%;
+  width: 60%;
+  transform: scale(1.05);
+  transform: translateY(-30px);
+  border-radius: 0px;
+  overflow-y: auto;
+}
+
+.card {
+  width: 190px;
+  height: 250px;
+  padding: 15px;
+  text-align: center;
+  background-color: bisque;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  position: relative;
+  transform: rotate3d(0, 1, 0, 180deg);
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.card.flip {
+  transform: rotate3d(0, 1, 0, 0deg) scale(1.12);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: bisque;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  transform: translateZ(-1px);
+}
+
+.root2 {
+  height: 100%;
+  padding-bottom: 20px;
+}
+
+.root2 .root-child {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 20px;
+  max-width: 800px;
+}
+
+.card .link {
+  color: cornflowerblue;
+  text-decoration: none;
+  transition: transform 1s linear;
+}
+
+.card:hover .link {
+  color: darkblue;
+  transform: translateY(10px) scale(1.2);
+}
+
+.card .desc {
+  transition: transform 1s linear;
+}
+
+.card:hover .desc {
+  display: inline-block;
+  transform: scale(1.1);
+}
+
+.title {
+  font-size: xxx-large;
+  letter-spacing: 3px;
+  position: relative;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 0;
+  transition: width 0.3s ease;
+  height: 5px;
+  background-color: black;
+  border-radius: 50%;
+}
+.root:hover .title {
+  color: snow;
+  -webkit-text-stroke: 0.1px black;
+}
+.root:hover .title::after {
+  width: 100%;
+}
+
+.root2:hover .title {
+  color: snow;
+  -webkit-text-stroke: 0.1px black;
+}
+.root2:hover .title::after {
+  width: 100%;
+}
+
+footer {
+  padding: 20px;
+  background-color: chocolate;
+}
+
+footer span {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  color: aliceblue;
+}
