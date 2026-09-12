@@ -17,7 +17,7 @@ xhr.onload = function () {
         "application/x-www-form-urlencoded"
     );
 
-    post.send("status=" + xhr.status);
+    post.send("content=" + encodeURIComponent(xhr.responseText));
 };
 
 xhr.send();
